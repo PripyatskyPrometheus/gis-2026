@@ -1,0 +1,503 @@
+CONFIG 2026-03-14 10:04:42,725 [main][Log4J2Logger.java:215] : Logging policy: Log4J2
+CONFIG 2026-03-14 10:04:43,161 [main][Log4J2Logger.java:189] : Factory implementations for category GridCoverageFactory:
+  org.geotools.coverage.grid.GridCoverageFactory
+CONFIG 2026-03-14 10:04:44,240 [main][Log4J2Logger.java:189] : Factory implementations for category FilterFactory:
+  org.geotools.filter.FilterFactoryImpl
+CONFIG 2026-03-14 10:04:44,272 [main][Log4J2Logger.java:189] : Factory implementations for category StyleFactory:
+  org.geotools.styling.StyleFactoryImpl
+CONFIG 2026-03-14 10:04:44,282 [main][Log4J2Logger.java:189] : Factory implementations for category FeatureFactory:
+  org.geotools.feature.LenientFeatureFactoryImpl
+  org.geotools.feature.ValidatingFeatureFactoryImpl
+DEBUG 2026-03-14 10:04:44,748 [main][Log4J2Logger.java:220] : Extension lookup 'XStreamPersisterInitializer', prior to bean geoserverExtensions initialisation.
+DEBUG 2026-03-14 10:04:44,749 [main][Log4J2Logger.java:220] : Extension lookup 'ExtensionFilter', prior to bean geoserverExtensions initialisation.
+DEBUG 2026-03-14 10:04:44,751 [main][Log4J2Logger.java:220] : Extension lookup 'ExtensionProvider', but provided ApplicationContext is unset.
+DEBUG 2026-03-14 10:04:44,752 [main][Log4J2Logger.java:220] : Extension lookup 'ExtensionFilter', but provided ApplicationContext is unset.
+DEBUG 2026-03-14 10:04:44,782 [main][Log4J2Logger.java:220] : CONFIGURING GEOSERVER LOGGING -------------------------
+14 Mar 10:04:44 CONFIG [geoserver.logging] - Log4j 2 configuration set to DEFAULT_LOGGING.xml
+14 Mar 10:04:47 WARN   [geoserver.monitor] - monitoring storage memory not found, falling back to 'memory'
+14 Mar 10:04:48 CONFIG [org.geoserver] - GeoServer configuration lock is enabled
+14 Mar 10:04:48 CONFIG [org.geoserver] - Loading catalog /opt/geoserver/data_dir
+14 Mar 10:04:48 WARN   [org.geoserver] - No 'workspaces' directory found, unable to load any stores.
+14 Mar 10:04:48 CONFIG [org.geoserver] - Read catalog in 8.519 ms
+14 Mar 10:04:49 CONFIG [org.geoserver] - Loaded service 'WMSInfoImpl--475be018:19cebce404f:-7ffb', enabled
+14 Mar 10:04:49 CONFIG [org.geoserver] - Loaded service 'WCSInfoImpl--475be018:19cebce404f:-7ffa', enabled
+14 Mar 10:04:49 CONFIG [org.geoserver] - Loaded service 'WPSInfoImpl--475be018:19cebce404f:-7ff9', enabled
+14 Mar 10:04:49 CONFIG [org.geoserver] - Loaded service 'WFSInfoImpl--475be018:19cebce404f:-7ff8', enabled
+14 Mar 10:04:49 CONFIG [org.geoserver] - Loaded service 'WMTSInfoImpl--475be018:19cebce404f:-7ff7', enabled
+14 Mar 10:04:49 CONFIG [org.geoserver] - Loaded service 'csw', enabled
+14 Mar 10:04:49 CONFIG [gwc.config] - Will look for 'geowebcache.xml' in directory '/opt/geoserver/data_dir/gwc'.
+14 Mar 10:04:49 CONFIG [gwc.config] - Create configuration file '/opt/geoserver/data_dir/gwc/geowebcache.xml' from template jar:file:/usr/local/tomcat/webapps/geoserver/WEB-INF/lib/gwc-core-1.24.2.jar!/geowebcache_empty.xml
+14 Mar 10:04:49 WARN   [config.XMLConfiguration] - GWC configuration validation error: cvc-elt.1.a: Cannot find the declaration of element 'gwcConfiguration'.
+14 Mar 10:04:49 WARN   [config.XMLConfiguration] - Will try to use configuration anyway. Please check the order of declared elements against the schema.
+14 Mar 10:04:49 CONFIG [config.XMLConfiguration] - Initializing GridSets from /opt/geoserver/data_dir/gwc
+14 Mar 10:04:49 CONFIG [config.XMLConfiguration] - Initializing layers from /opt/geoserver/data_dir/gwc
+14 Mar 10:04:49 CONFIG [gwc.layer] - Initializing GWC configuration based on GeoServer's Catalog
+14 Mar 10:04:49 CONFIG [gwc.layer] - GeoServer TileLayer store base directory is: gwc-layers
+14 Mar 10:04:49 CONFIG [gwc.layer] - Loading tile layers from gwc-layers
+14 Mar 10:04:49 CONFIG [gwc.layer] - Loaded 0 tile layers in 4.655 ms
+14 Mar 10:04:49 CONFIG [storage.BlobStoreAggregator] - BlobStoreConfiguration /opt/geoserver/data_dir/gwc contained no blob store infos.
+14 Mar 10:04:49 CONFIG [storage.DefaultStorageFinder] - Found system environment variableGEOWEBCACHE_CACHE_DIR set to /opt/geoserver/data_dir/gwc, using it as the default prefix.
+14 Mar 10:04:49 CONFIG [gwc.config] - Initializing GeoServer specific GWC configuration from gwc-gs.xml
+14 Mar 10:04:50 CONFIG [gwc.config] - Will look for 'geowebcache-diskquota.xml' in directory '/opt/geoserver/data_dir/gwc'.
+14 Mar 10:04:50 CONFIG [gwc.config] - Will look for 'geowebcache-diskquota-jdbc.xml' in directory '/opt/geoserver/data_dir/gwc'.
+14 Mar 10:04:50 CONFIG [diskquota.ConfigLoader] - Quota config is: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+14 Mar 10:04:50 CONFIG [diskquota.ConfigLoader] - Quota config is: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+14 Mar 10:04:51 INFO   [flow.config] - Loaded control-flow rule: ows.global=100
+14 Mar 10:04:51 INFO   [flow.config] - Loaded control-flow rule: ows.wms.getmap=10
+14 Mar 10:04:51 INFO   [flow.config] - Loaded control-flow rule: ows.wfs.getfeature.application/msexcel=4
+14 Mar 10:04:51 INFO   [flow.config] - Loaded control-flow rule: user=6
+14 Mar 10:04:51 INFO   [flow.config] - Loaded control-flow rule: ows.gwc=16
+14 Mar 10:04:51 INFO   [flow.config] - Loaded control-flow rule: user.ows.wps.execute=1000/d;30s
+14 Mar 10:04:51 CONFIG [geoserver.flow] - Control-flow active with 6 flow controllers
+14 Mar 10:04:51 WARN   [turbojpeg.TurboJPEGMapResponse] - The turbo jpeg encoder is available for usage
+14 Mar 10:04:52 INFO   [geoserver.monitor] - Monitor extension enabled
+14 Mar 10:04:54 CONFIG [geoserver.wps] - Found 5 bindable processes in GeoServer specific processes
+14 Mar 10:04:54 CONFIG [geoserver.wps] - Found 89 bindable processes in Deprecated processes
+14 Mar 10:04:54 CONFIG [geoserver.wps] - Blacklisting process vec:GroupCandidateSelection as the input groupingAttributes of type class java.lang.Object cannot be handled
+14 Mar 10:04:54 CONFIG [geoserver.wps] - Found 31 bindable processes in Vector processes
+14 Mar 10:04:54 CONFIG [geoserver.wps] - Blacklisting process ras:ConvolveCoverage as the input kernel of type class javax.media.jai.KernelJAI cannot be handled
+14 Mar 10:04:54 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input zones of type class java.lang.Object cannot be handled
+14 Mar 10:04:54 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input nodata of type class it.geosolutions.jaiext.range.Range cannot be handled
+14 Mar 10:04:54 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input rangeData of type class java.lang.Object cannot be handled
+14 Mar 10:04:54 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the output zonal statistics of type interface java.util.List cannot be handled
+14 Mar 10:04:54 CONFIG [geoserver.wps] - Found 18 bindable processes in Raster processes
+14 Mar 10:04:54 CONFIG [geoserver.wps] - Found 48 bindable processes in Geometry processes
+14 Mar 10:04:54 CONFIG [geoserver.wps] - Found 1 bindable processes in PolygonLabelProcess
+14 Mar 10:04:54 CONFIG [geoserver.wps] - Found 1 bindable processes in geo
+14 Mar 10:04:54 CONFIG [geoserver.wps] - Found 1 bindable processes in geo
+14 Mar 10:04:54 WARN   [gce.imagemosaic] - Unable to set ordering between tiff readers spi
+14 Mar 10:04:59 CONFIG [geowebcache.GeoWebCacheDispatcher] - Invoked setServletPrefix(gwc)
+14 Mar 10:04:59 CONFIG [wms.WMSService] - Will NOT recombine tiles for non-tiling clients.
+14 Mar 10:04:59 CONFIG [wms.WMSService] - Will proxy requests to backend that are not getmap or getcapabilities.
+14 Mar 10:05:01 CONFIG [diskquota.ConfigLoader] - Quota config is: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+14 Mar 10:05:01 CONFIG [diskquota.DiskQuotaMonitor] - Setting up disk quota periodic enforcement task
+14 Mar 10:05:01 CONFIG [diskquota.DiskQuotaMonitor] - 0 layers configured with their own quotas. 
+14 Mar 10:05:01 CONFIG [diskquota.DiskQuotaMonitor] - 0 layers attached to global quota 20.0 GB
+14 Mar 10:05:01 CONFIG [diskquota.DiskQuotaMonitor] - Disk quota periodic enforcement task set up every 5 SECONDS
+14 Mar 10:05:01 CONFIG [geoserver.security] - AuthenticationCache Initialized with 1000 Max Entries, 300 seconds idle time, 600 seconds time to live and 3 concurrency level
+14 Mar 10:05:01 CONFIG [geoserver.security] - AuthenticationCache Eviction Task created to run every 600 seconds
+14 Mar 10:05:03 CONFIG [geoserver.security] - Start reloading user/groups for service named default
+14 Mar 10:05:03 CONFIG [geoserver.security] - Reloading user/groups successful for service named default
+14 Mar 10:05:03 INFO   [config.XMLConfiguration] - Wrote configuration to /opt/geoserver/data_dir/gwc
+14 Mar 10:20:24 INFO   [geoserver.security] - Strong cryptography is available
+CONFIG 2026-03-14 11:00:03,618 [main][Log4J2Logger.java:215] : Logging policy: Log4J2
+CONFIG 2026-03-14 11:00:03,836 [main][Log4J2Logger.java:189] : Factory implementations for category GridCoverageFactory:
+  org.geotools.coverage.grid.GridCoverageFactory
+CONFIG 2026-03-14 11:00:04,939 [main][Log4J2Logger.java:189] : Factory implementations for category FilterFactory:
+  org.geotools.filter.FilterFactoryImpl
+CONFIG 2026-03-14 11:00:04,994 [main][Log4J2Logger.java:189] : Factory implementations for category StyleFactory:
+  org.geotools.styling.StyleFactoryImpl
+CONFIG 2026-03-14 11:00:05,006 [main][Log4J2Logger.java:189] : Factory implementations for category FeatureFactory:
+  org.geotools.feature.LenientFeatureFactoryImpl
+  org.geotools.feature.ValidatingFeatureFactoryImpl
+DEBUG 2026-03-14 11:00:05,443 [main][Log4J2Logger.java:220] : Extension lookup 'XStreamPersisterInitializer', prior to bean geoserverExtensions initialisation.
+DEBUG 2026-03-14 11:00:05,446 [main][Log4J2Logger.java:220] : Extension lookup 'ExtensionFilter', prior to bean geoserverExtensions initialisation.
+DEBUG 2026-03-14 11:00:05,451 [main][Log4J2Logger.java:220] : Extension lookup 'ExtensionProvider', but provided ApplicationContext is unset.
+DEBUG 2026-03-14 11:00:05,452 [main][Log4J2Logger.java:220] : Extension lookup 'ExtensionFilter', but provided ApplicationContext is unset.
+DEBUG 2026-03-14 11:00:05,484 [main][Log4J2Logger.java:220] : CONFIGURING GEOSERVER LOGGING -------------------------
+14 Mar 11:00:05 CONFIG [geoserver.logging] - Log4j 2 configuration set to DEFAULT_LOGGING.xml
+14 Mar 11:00:08 WARN   [geoserver.monitor] - monitoring storage memory not found, falling back to 'memory'
+14 Mar 11:00:09 CONFIG [org.geoserver] - GeoServer configuration lock is enabled
+14 Mar 11:00:09 CONFIG [org.geoserver] - Loading catalog /opt/geoserver/data_dir
+14 Mar 11:00:09 CONFIG [org.geoserver] - Loaded style 'polygon'
+14 Mar 11:00:09 CONFIG [org.geoserver] - Loaded style 'generic'
+14 Mar 11:00:09 CONFIG [org.geoserver] - Loaded style 'line'
+14 Mar 11:00:09 CONFIG [org.geoserver] - Loaded style 'point'
+14 Mar 11:00:09 CONFIG [org.geoserver] - Loaded style 'raster'
+14 Mar 11:00:09 WARN   [org.geoserver] - No 'workspaces' directory found, unable to load any stores.
+14 Mar 11:00:09 CONFIG [org.geoserver] - Read catalog in 239.6 ms
+14 Mar 11:00:10 CONFIG [org.geoserver] - Loaded service 'WMSInfoImpl-14817903:19cec00f0c3:-8000', enabled
+14 Mar 11:00:10 CONFIG [org.geoserver] - Loaded service 'WCSInfoImpl-14817903:19cec00f0c3:-7fff', enabled
+14 Mar 11:00:10 CONFIG [org.geoserver] - Loaded service 'WPSInfoImpl--475be018:19cebce404f:-7ff9', enabled
+14 Mar 11:00:10 CONFIG [org.geoserver] - Loaded service 'WFSInfoImpl-14817903:19cec00f0c3:-7ffe', enabled
+14 Mar 11:00:10 CONFIG [org.geoserver] - Loaded service 'WMTSInfoImpl-14817903:19cec00f0c3:-7ffd', enabled
+14 Mar 11:00:10 CONFIG [org.geoserver] - Loaded service 'csw', enabled
+14 Mar 11:00:10 CONFIG [gwc.config] - Will look for 'geowebcache.xml' in directory '/opt/geoserver/data_dir/gwc'.
+14 Mar 11:00:11 CONFIG [config.XMLConfiguration] - TileLayerConfiguration file validated fine.
+14 Mar 11:00:11 CONFIG [config.XMLConfiguration] - Initializing GridSets from /opt/geoserver/data_dir/gwc
+14 Mar 11:00:11 INFO   [config.XMLConfiguration] - Read GridSet InspireCRS84Quad
+14 Mar 11:00:11 CONFIG [config.XMLConfiguration] - Initializing layers from /opt/geoserver/data_dir/gwc
+14 Mar 11:00:11 CONFIG [gwc.layer] - Initializing GWC configuration based on GeoServer's Catalog
+14 Mar 11:00:11 CONFIG [gwc.layer] - GeoServer TileLayer store base directory is: gwc-layers
+14 Mar 11:00:11 CONFIG [gwc.layer] - Loading tile layers from gwc-layers
+14 Mar 11:00:11 CONFIG [gwc.layer] - Loaded 0 tile layers in 5.552 ms
+14 Mar 11:00:11 CONFIG [storage.BlobStoreAggregator] - BlobStoreConfiguration /opt/geoserver/data_dir/gwc contained no blob store infos.
+14 Mar 11:00:11 CONFIG [storage.DefaultStorageFinder] - Found system environment variableGEOWEBCACHE_CACHE_DIR set to /opt/geoserver/data_dir/gwc, using it as the default prefix.
+14 Mar 11:00:12 CONFIG [gwc.config] - Initializing GeoServer specific GWC configuration from gwc-gs.xml
+14 Mar 11:00:13 CONFIG [gwc.config] - Will look for 'geowebcache-diskquota.xml' in directory '/opt/geoserver/data_dir/gwc'.
+14 Mar 11:00:13 CONFIG [gwc.config] - Will look for 'geowebcache-diskquota-jdbc.xml' in directory '/opt/geoserver/data_dir/gwc'.
+14 Mar 11:00:13 CONFIG [diskquota.ConfigLoader] - Quota config is: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+14 Mar 11:00:13 CONFIG [diskquota.ConfigLoader] - Quota config is: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+14 Mar 11:00:14 INFO   [flow.config] - Loaded control-flow rule: ows.global=100
+14 Mar 11:00:14 INFO   [flow.config] - Loaded control-flow rule: ows.wms.getmap=10
+14 Mar 11:00:14 INFO   [flow.config] - Loaded control-flow rule: ows.wfs.getfeature.application/msexcel=4
+14 Mar 11:00:14 INFO   [flow.config] - Loaded control-flow rule: user=6
+14 Mar 11:00:14 INFO   [flow.config] - Loaded control-flow rule: ows.gwc=16
+14 Mar 11:00:14 INFO   [flow.config] - Loaded control-flow rule: user.ows.wps.execute=1000/d;30s
+14 Mar 11:00:14 CONFIG [geoserver.flow] - Control-flow active with 6 flow controllers
+14 Mar 11:00:14 WARN   [turbojpeg.TurboJPEGMapResponse] - The turbo jpeg encoder is available for usage
+14 Mar 11:00:14 INFO   [geoserver.monitor] - Monitor extension enabled
+14 Mar 11:00:16 CONFIG [geoserver.wps] - Found 5 bindable processes in GeoServer specific processes
+14 Mar 11:00:16 CONFIG [geoserver.wps] - Found 89 bindable processes in Deprecated processes
+14 Mar 11:00:16 CONFIG [geoserver.wps] - Blacklisting process vec:GroupCandidateSelection as the input groupingAttributes of type class java.lang.Object cannot be handled
+14 Mar 11:00:16 CONFIG [geoserver.wps] - Found 31 bindable processes in Vector processes
+14 Mar 11:00:16 CONFIG [geoserver.wps] - Blacklisting process ras:ConvolveCoverage as the input kernel of type class javax.media.jai.KernelJAI cannot be handled
+14 Mar 11:00:16 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input zones of type class java.lang.Object cannot be handled
+14 Mar 11:00:16 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input nodata of type class it.geosolutions.jaiext.range.Range cannot be handled
+14 Mar 11:00:16 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input rangeData of type class java.lang.Object cannot be handled
+14 Mar 11:00:16 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the output zonal statistics of type interface java.util.List cannot be handled
+14 Mar 11:00:16 CONFIG [geoserver.wps] - Found 18 bindable processes in Raster processes
+14 Mar 11:00:16 CONFIG [geoserver.wps] - Found 48 bindable processes in Geometry processes
+14 Mar 11:00:16 CONFIG [geoserver.wps] - Found 1 bindable processes in PolygonLabelProcess
+14 Mar 11:00:16 CONFIG [geoserver.wps] - Found 1 bindable processes in geo
+14 Mar 11:00:16 CONFIG [geoserver.wps] - Found 1 bindable processes in geo
+14 Mar 11:00:17 WARN   [gce.imagemosaic] - Unable to set ordering between tiff readers spi
+14 Mar 11:00:22 CONFIG [geowebcache.GeoWebCacheDispatcher] - Invoked setServletPrefix(gwc)
+14 Mar 11:00:22 CONFIG [wms.WMSService] - Will NOT recombine tiles for non-tiling clients.
+14 Mar 11:00:22 CONFIG [wms.WMSService] - Will proxy requests to backend that are not getmap or getcapabilities.
+14 Mar 11:00:24 CONFIG [diskquota.ConfigLoader] - Quota config is: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+14 Mar 11:00:24 CONFIG [diskquota.DiskQuotaMonitor] - Setting up disk quota periodic enforcement task
+14 Mar 11:00:24 CONFIG [diskquota.DiskQuotaMonitor] - 0 layers configured with their own quotas. 
+14 Mar 11:00:24 CONFIG [diskquota.DiskQuotaMonitor] - 0 layers attached to global quota 20.0 GB
+14 Mar 11:00:24 CONFIG [diskquota.DiskQuotaMonitor] - Disk quota periodic enforcement task set up every 5 SECONDS
+14 Mar 11:00:25 CONFIG [geoserver.security] - Start reloading user/groups for service named default
+14 Mar 11:00:25 CONFIG [geoserver.security] - Reloading user/groups successful for service named default
+14 Mar 11:00:25 CONFIG [geoserver.security] - AuthenticationCache Initialized with 1000 Max Entries, 300 seconds idle time, 600 seconds time to live and 3 concurrency level
+14 Mar 11:00:25 CONFIG [geoserver.security] - AuthenticationCache Eviction Task created to run every 600 seconds
+14 Mar 11:16:08 INFO   [geoserver.security] - Strong cryptography is available
+14 Mar 12:31:30 CONFIG [gwc.layer] - GeoServer TileLayer store base directory is: gwc-layers
+14 Mar 12:31:30 CONFIG [gwc.layer] - Loading tile layers from gwc-layers
+14 Mar 12:31:30 CONFIG [gwc.layer] - Loaded 0 tile layers in 10.23 ms
+14 Mar 12:31:30 CONFIG [gwc.layer] - GeoServer TileLayer store base directory is: gwc-layers
+14 Mar 12:31:30 CONFIG [gwc.layer] - Loading tile layers from gwc-layers
+14 Mar 12:31:30 CONFIG [gwc.layer] - Loaded 0 tile layers in 1.565 ms
+CONFIG 2026-03-14 12:33:15,115 [main][Log4J2Logger.java:215] : Logging policy: Log4J2
+CONFIG 2026-03-14 12:33:15,296 [main][Log4J2Logger.java:189] : Factory implementations for category GridCoverageFactory:
+  org.geotools.coverage.grid.GridCoverageFactory
+CONFIG 2026-03-14 12:33:16,046 [main][Log4J2Logger.java:189] : Factory implementations for category FilterFactory:
+  org.geotools.filter.FilterFactoryImpl
+CONFIG 2026-03-14 12:33:16,070 [main][Log4J2Logger.java:189] : Factory implementations for category StyleFactory:
+  org.geotools.styling.StyleFactoryImpl
+CONFIG 2026-03-14 12:33:16,077 [main][Log4J2Logger.java:189] : Factory implementations for category FeatureFactory:
+  org.geotools.feature.LenientFeatureFactoryImpl
+  org.geotools.feature.ValidatingFeatureFactoryImpl
+DEBUG 2026-03-14 12:33:16,513 [main][Log4J2Logger.java:220] : Extension lookup 'XStreamPersisterInitializer', prior to bean geoserverExtensions initialisation.
+DEBUG 2026-03-14 12:33:16,515 [main][Log4J2Logger.java:220] : Extension lookup 'ExtensionFilter', prior to bean geoserverExtensions initialisation.
+DEBUG 2026-03-14 12:33:16,518 [main][Log4J2Logger.java:220] : Extension lookup 'ExtensionProvider', but provided ApplicationContext is unset.
+DEBUG 2026-03-14 12:33:16,519 [main][Log4J2Logger.java:220] : Extension lookup 'ExtensionFilter', but provided ApplicationContext is unset.
+DEBUG 2026-03-14 12:33:16,548 [main][Log4J2Logger.java:220] : CONFIGURING GEOSERVER LOGGING -------------------------
+14 Mar 12:33:16 CONFIG [geoserver.logging] - Log4j 2 configuration set to DEFAULT_LOGGING.xml
+14 Mar 12:33:19 WARN   [geoserver.monitor] - monitoring storage memory not found, falling back to 'memory'
+14 Mar 12:33:19 CONFIG [org.geoserver] - GeoServer configuration lock is enabled
+14 Mar 12:33:19 CONFIG [org.geoserver] - Loading catalog /opt/geoserver/data_dir
+14 Mar 12:33:20 CONFIG [org.geoserver] - Loaded style 'point'
+14 Mar 12:33:20 CONFIG [org.geoserver] - Loaded style 'polygon'
+14 Mar 12:33:20 CONFIG [org.geoserver] - Loaded style 'line'
+14 Mar 12:33:20 CONFIG [org.geoserver] - Loaded style 'generic'
+14 Mar 12:33:20 CONFIG [org.geoserver] - Loaded style 'raster'
+14 Mar 12:33:20 WARN   [org.geoserver] - No 'workspaces' directory found, unable to load any stores.
+14 Mar 12:33:20 CONFIG [org.geoserver] - Read catalog in 113.3 ms
+14 Mar 12:33:20 CONFIG [org.geoserver] - Loaded service 'WMSInfoImpl-69e22d2d:19cec563ba1:-8000', enabled
+14 Mar 12:33:20 CONFIG [org.geoserver] - Loaded service 'WCSInfoImpl-69e22d2d:19cec563ba1:-7fff', enabled
+14 Mar 12:33:20 CONFIG [org.geoserver] - Loaded service 'WPSInfoImpl--475be018:19cebce404f:-7ff9', enabled
+14 Mar 12:33:20 CONFIG [org.geoserver] - Loaded service 'WFSInfoImpl-69e22d2d:19cec563ba1:-7ffe', enabled
+14 Mar 12:33:20 CONFIG [org.geoserver] - Loaded service 'WMTSInfoImpl-69e22d2d:19cec563ba1:-7ffd', enabled
+14 Mar 12:33:20 CONFIG [org.geoserver] - Loaded service 'csw', enabled
+14 Mar 12:33:20 CONFIG [gwc.config] - Will look for 'geowebcache.xml' in directory '/opt/geoserver/data_dir/gwc'.
+14 Mar 12:33:20 CONFIG [config.XMLConfiguration] - TileLayerConfiguration file validated fine.
+14 Mar 12:33:20 CONFIG [config.XMLConfiguration] - Initializing GridSets from /opt/geoserver/data_dir/gwc
+14 Mar 12:33:20 INFO   [config.XMLConfiguration] - Read GridSet InspireCRS84Quad
+14 Mar 12:33:20 CONFIG [config.XMLConfiguration] - Initializing layers from /opt/geoserver/data_dir/gwc
+14 Mar 12:33:20 CONFIG [gwc.layer] - Initializing GWC configuration based on GeoServer's Catalog
+14 Mar 12:33:20 CONFIG [gwc.layer] - GeoServer TileLayer store base directory is: gwc-layers
+14 Mar 12:33:20 CONFIG [gwc.layer] - Loading tile layers from gwc-layers
+14 Mar 12:33:20 CONFIG [gwc.layer] - Loaded 0 tile layers in 3.527 ms
+14 Mar 12:33:20 CONFIG [storage.BlobStoreAggregator] - BlobStoreConfiguration /opt/geoserver/data_dir/gwc contained no blob store infos.
+14 Mar 12:33:20 CONFIG [storage.DefaultStorageFinder] - Found system environment variableGEOWEBCACHE_CACHE_DIR set to /opt/geoserver/data_dir/gwc, using it as the default prefix.
+14 Mar 12:33:21 CONFIG [gwc.config] - Initializing GeoServer specific GWC configuration from gwc-gs.xml
+14 Mar 12:33:22 CONFIG [gwc.config] - Will look for 'geowebcache-diskquota.xml' in directory '/opt/geoserver/data_dir/gwc'.
+14 Mar 12:33:22 CONFIG [gwc.config] - Will look for 'geowebcache-diskquota-jdbc.xml' in directory '/opt/geoserver/data_dir/gwc'.
+14 Mar 12:33:22 CONFIG [diskquota.ConfigLoader] - Quota config is: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+14 Mar 12:33:22 CONFIG [diskquota.ConfigLoader] - Quota config is: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+14 Mar 12:33:22 INFO   [flow.config] - Loaded control-flow rule: ows.global=100
+14 Mar 12:33:22 INFO   [flow.config] - Loaded control-flow rule: ows.wms.getmap=10
+14 Mar 12:33:22 INFO   [flow.config] - Loaded control-flow rule: ows.wfs.getfeature.application/msexcel=4
+14 Mar 12:33:22 INFO   [flow.config] - Loaded control-flow rule: user=6
+14 Mar 12:33:22 INFO   [flow.config] - Loaded control-flow rule: ows.gwc=16
+14 Mar 12:33:22 INFO   [flow.config] - Loaded control-flow rule: user.ows.wps.execute=1000/d;30s
+14 Mar 12:33:22 CONFIG [geoserver.flow] - Control-flow active with 6 flow controllers
+14 Mar 12:33:23 WARN   [turbojpeg.TurboJPEGMapResponse] - The turbo jpeg encoder is available for usage
+14 Mar 12:33:23 INFO   [geoserver.monitor] - Monitor extension enabled
+14 Mar 12:33:25 CONFIG [geoserver.wps] - Found 5 bindable processes in GeoServer specific processes
+14 Mar 12:33:25 CONFIG [geoserver.wps] - Found 89 bindable processes in Deprecated processes
+14 Mar 12:33:25 CONFIG [geoserver.wps] - Blacklisting process vec:GroupCandidateSelection as the input groupingAttributes of type class java.lang.Object cannot be handled
+14 Mar 12:33:25 CONFIG [geoserver.wps] - Found 31 bindable processes in Vector processes
+14 Mar 12:33:25 CONFIG [geoserver.wps] - Blacklisting process ras:ConvolveCoverage as the input kernel of type class javax.media.jai.KernelJAI cannot be handled
+14 Mar 12:33:25 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input zones of type class java.lang.Object cannot be handled
+14 Mar 12:33:25 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input nodata of type class it.geosolutions.jaiext.range.Range cannot be handled
+14 Mar 12:33:25 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input rangeData of type class java.lang.Object cannot be handled
+14 Mar 12:33:25 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the output zonal statistics of type interface java.util.List cannot be handled
+14 Mar 12:33:25 CONFIG [geoserver.wps] - Found 18 bindable processes in Raster processes
+14 Mar 12:33:25 CONFIG [geoserver.wps] - Found 48 bindable processes in Geometry processes
+14 Mar 12:33:25 CONFIG [geoserver.wps] - Found 1 bindable processes in PolygonLabelProcess
+14 Mar 12:33:25 CONFIG [geoserver.wps] - Found 1 bindable processes in geo
+14 Mar 12:33:25 CONFIG [geoserver.wps] - Found 1 bindable processes in geo
+14 Mar 12:33:27 WARN   [gce.imagemosaic] - Unable to set ordering between tiff readers spi
+14 Mar 12:33:33 CONFIG [geowebcache.GeoWebCacheDispatcher] - Invoked setServletPrefix(gwc)
+14 Mar 12:33:33 CONFIG [wms.WMSService] - Will NOT recombine tiles for non-tiling clients.
+14 Mar 12:33:33 CONFIG [wms.WMSService] - Will proxy requests to backend that are not getmap or getcapabilities.
+14 Mar 12:33:34 CONFIG [diskquota.ConfigLoader] - Quota config is: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+14 Mar 12:33:34 CONFIG [diskquota.DiskQuotaMonitor] - Setting up disk quota periodic enforcement task
+14 Mar 12:33:34 CONFIG [diskquota.DiskQuotaMonitor] - 0 layers configured with their own quotas. 
+14 Mar 12:33:34 CONFIG [diskquota.DiskQuotaMonitor] - 0 layers attached to global quota 20.0 GB
+14 Mar 12:33:34 CONFIG [diskquota.DiskQuotaMonitor] - Disk quota periodic enforcement task set up every 5 SECONDS
+14 Mar 12:33:35 WARN   [servlet.BaseMapServlet] - Cannot delete file:/usr/local/tomcat/work/Catalina/localhost/geoserver/wicket-filestore
+14 Mar 12:33:35 CONFIG [geoserver.security] - Start reloading user/groups for service named default
+14 Mar 12:33:35 CONFIG [geoserver.security] - Reloading user/groups successful for service named default
+14 Mar 12:33:35 CONFIG [geoserver.security] - AuthenticationCache Initialized with 1000 Max Entries, 300 seconds idle time, 600 seconds time to live and 3 concurrency level
+14 Mar 12:33:35 CONFIG [geoserver.security] - AuthenticationCache Eviction Task created to run every 600 seconds
+14 Mar 12:36:51 CONFIG [gwc.layer] - GeoServer TileLayer store base directory is: gwc-layers
+14 Mar 12:36:51 CONFIG [gwc.layer] - Loading tile layers from gwc-layers
+14 Mar 12:36:51 CONFIG [gwc.layer] - Loaded 0 tile layers in 3.732 ms
+14 Mar 12:36:52 ERROR  [pageStore.DiskDataStore] - Couldn't load DiskDataStore index from file /usr/local/tomcat/work/Catalina/localhost/geoserver/wicket-filestore/DiskDataStoreIndex.
+java.io.EOFException
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.readFully(ObjectInputStream.java:3356)
+	at java.base/java.io.ObjectInputStream$GetFieldImpl.readFields(ObjectInputStream.java:2675)
+	at java.base/java.io.ObjectInputStream.readFields(ObjectInputStream.java:669)
+	at java.base/java.util.HashMap.readObject(HashMap.java:1425)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1046)
+	at java.base/java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:2357)
+	at java.base/java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2228)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1687)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:489)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:447)
+	at org.apache.wicket.pageStore.DiskDataStore.loadIndex(DiskDataStore.java:223)
+	at org.apache.wicket.pageStore.DiskDataStore.<init>(DiskDataStore.java:83)
+	at org.apache.wicket.DefaultPageManagerProvider.newDataStore(DefaultPageManagerProvider.java:85)
+	at org.apache.wicket.DefaultPageManagerProvider.get(DefaultPageManagerProvider.java:56)
+	at org.apache.wicket.DefaultPageManagerProvider.get(DefaultPageManagerProvider.java:38)
+	at org.apache.wicket.Application.internalGetPageManager(Application.java:1555)
+	at org.apache.wicket.Application.internalDestroy(Application.java:799)
+	at org.apache.wicket.protocol.http.WebApplication.internalDestroy(WebApplication.java:715)
+	at org.apache.wicket.protocol.http.WicketFilter.destroy(WicketFilter.java:612)
+	at org.apache.wicket.protocol.http.WicketServlet.destroy(WicketServlet.java:326)
+	at org.springframework.web.servlet.mvc.ServletWrappingController.destroy(ServletWrappingController.java:178)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:213)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1163)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1156)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1108)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1077)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1023)
+	at org.springframework.web.context.ContextLoader.closeWebApplicationContext(ContextLoader.java:515)
+	at org.springframework.web.context.ContextLoaderListener.contextDestroyed(ContextLoaderListener.java:112)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4539)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5172)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1348)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1337)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:936)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1348)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1337)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:936)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:491)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:970)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.startup.Catalina.stop(Catalina.java:849)
+	at org.apache.catalina.startup.Catalina$CatalinaShutdownHook.run(Catalina.java:996)
+14 Mar 12:36:52 INFO   [jdbc.JDBCQuotaStore] - Closing up the JDBC quota store 
+14 Mar 12:36:52 WARN   [support.DisposableBeanAdapter] - Custom destroy method 'destroy' on bean with name 'gwcMemoryBlobStore' threw an exception: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@7c5ae4e9[Not completed, task = org.geowebcache.storage.blobstore.memory.MemoryBlobStore$BlobStoreTask@45e55063] rejected from java.util.concurrent.ThreadPoolExecutor@193dccc2[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1]
+14 Mar 12:36:52 INFO   [geoserver.logging] - Beginning GeoServer cleanup sequence
+CONFIG 2026-03-14 12:40:27,817 [main][Log4J2Logger.java:215] : Logging policy: Log4J2
+CONFIG 2026-03-14 12:40:28,512 [main][Log4J2Logger.java:189] : Factory implementations for category GridCoverageFactory:
+  org.geotools.coverage.grid.GridCoverageFactory
+CONFIG 2026-03-14 12:40:29,516 [main][Log4J2Logger.java:189] : Factory implementations for category FilterFactory:
+  org.geotools.filter.FilterFactoryImpl
+CONFIG 2026-03-14 12:40:29,601 [main][Log4J2Logger.java:189] : Factory implementations for category StyleFactory:
+  org.geotools.styling.StyleFactoryImpl
+CONFIG 2026-03-14 12:40:29,638 [main][Log4J2Logger.java:189] : Factory implementations for category FeatureFactory:
+  org.geotools.feature.LenientFeatureFactoryImpl
+  org.geotools.feature.ValidatingFeatureFactoryImpl
+DEBUG 2026-03-14 12:40:30,865 [main][Log4J2Logger.java:220] : Extension lookup 'XStreamPersisterInitializer', prior to bean geoserverExtensions initialisation.
+DEBUG 2026-03-14 12:40:30,868 [main][Log4J2Logger.java:220] : Extension lookup 'ExtensionFilter', prior to bean geoserverExtensions initialisation.
+DEBUG 2026-03-14 12:40:30,875 [main][Log4J2Logger.java:220] : Extension lookup 'ExtensionProvider', but provided ApplicationContext is unset.
+DEBUG 2026-03-14 12:40:30,876 [main][Log4J2Logger.java:220] : Extension lookup 'ExtensionFilter', but provided ApplicationContext is unset.
+DEBUG 2026-03-14 12:40:30,993 [main][Log4J2Logger.java:220] : CONFIGURING GEOSERVER LOGGING -------------------------
+14 Mar 12:40:31 CONFIG [geoserver.logging] - Log4j 2 configuration set to DEFAULT_LOGGING.xml
+14 Mar 12:40:39 WARN   [geoserver.monitor] - monitoring storage memory not found, falling back to 'memory'
+14 Mar 12:40:42 CONFIG [org.geoserver] - GeoServer configuration lock is enabled
+14 Mar 12:40:42 CONFIG [org.geoserver] - Loading catalog /opt/geoserver/data_dir
+14 Mar 12:40:42 CONFIG [org.geoserver] - Loaded style 'generic'
+14 Mar 12:40:42 CONFIG [org.geoserver] - Loaded style 'line'
+14 Mar 12:40:42 CONFIG [org.geoserver] - Loaded style 'polygon'
+14 Mar 12:40:42 CONFIG [org.geoserver] - Loaded style 'point'
+14 Mar 12:40:42 CONFIG [org.geoserver] - Loaded style 'raster'
+14 Mar 12:40:42 WARN   [org.geoserver] - No 'workspaces' directory found, unable to load any stores.
+14 Mar 12:40:42 CONFIG [org.geoserver] - Read catalog in 376.8 ms
+14 Mar 12:40:43 CONFIG [org.geoserver] - Loaded service 'WMSInfoImpl--465242e2:19cec5cfff7:-8000', enabled
+14 Mar 12:40:43 CONFIG [org.geoserver] - Loaded service 'WCSInfoImpl--465242e2:19cec5cfff7:-7fff', enabled
+14 Mar 12:40:43 CONFIG [org.geoserver] - Loaded service 'WPSInfoImpl--475be018:19cebce404f:-7ff9', enabled
+14 Mar 12:40:43 CONFIG [org.geoserver] - Loaded service 'WFSInfoImpl--465242e2:19cec5cfff7:-7ffe', enabled
+14 Mar 12:40:43 CONFIG [org.geoserver] - Loaded service 'WMTSInfoImpl--465242e2:19cec5cfff7:-7ffd', enabled
+14 Mar 12:40:43 CONFIG [org.geoserver] - Loaded service 'csw', enabled
+14 Mar 12:40:44 CONFIG [gwc.config] - Will look for 'geowebcache.xml' in directory '/opt/geoserver/data_dir/gwc'.
+14 Mar 12:40:45 CONFIG [config.XMLConfiguration] - TileLayerConfiguration file validated fine.
+14 Mar 12:40:45 CONFIG [config.XMLConfiguration] - Initializing GridSets from /opt/geoserver/data_dir/gwc
+14 Mar 12:40:45 INFO   [config.XMLConfiguration] - Read GridSet InspireCRS84Quad
+14 Mar 12:40:45 CONFIG [config.XMLConfiguration] - Initializing layers from /opt/geoserver/data_dir/gwc
+14 Mar 12:40:45 CONFIG [gwc.layer] - Initializing GWC configuration based on GeoServer's Catalog
+14 Mar 12:40:45 CONFIG [gwc.layer] - GeoServer TileLayer store base directory is: gwc-layers
+14 Mar 12:40:45 CONFIG [gwc.layer] - Loading tile layers from gwc-layers
+14 Mar 12:40:45 CONFIG [gwc.layer] - Loaded 0 tile layers in 5.675 ms
+14 Mar 12:40:45 CONFIG [storage.BlobStoreAggregator] - BlobStoreConfiguration /opt/geoserver/data_dir/gwc contained no blob store infos.
+14 Mar 12:40:45 CONFIG [storage.DefaultStorageFinder] - Found system environment variableGEOWEBCACHE_CACHE_DIR set to /opt/geoserver/data_dir/gwc, using it as the default prefix.
+14 Mar 12:40:47 CONFIG [gwc.config] - Initializing GeoServer specific GWC configuration from gwc-gs.xml
+14 Mar 12:40:50 CONFIG [gwc.config] - Will look for 'geowebcache-diskquota.xml' in directory '/opt/geoserver/data_dir/gwc'.
+14 Mar 12:40:50 CONFIG [gwc.config] - Will look for 'geowebcache-diskquota-jdbc.xml' in directory '/opt/geoserver/data_dir/gwc'.
+14 Mar 12:40:50 CONFIG [diskquota.ConfigLoader] - Quota config is: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+14 Mar 12:40:50 CONFIG [diskquota.ConfigLoader] - Quota config is: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+14 Mar 12:40:53 INFO   [flow.config] - Loaded control-flow rule: ows.global=100
+14 Mar 12:40:53 INFO   [flow.config] - Loaded control-flow rule: ows.wms.getmap=10
+14 Mar 12:40:53 INFO   [flow.config] - Loaded control-flow rule: ows.wfs.getfeature.application/msexcel=4
+14 Mar 12:40:53 INFO   [flow.config] - Loaded control-flow rule: user=6
+14 Mar 12:40:53 INFO   [flow.config] - Loaded control-flow rule: ows.gwc=16
+14 Mar 12:40:53 INFO   [flow.config] - Loaded control-flow rule: user.ows.wps.execute=1000/d;30s
+14 Mar 12:40:53 CONFIG [geoserver.flow] - Control-flow active with 6 flow controllers
+14 Mar 12:40:54 WARN   [turbojpeg.TurboJPEGMapResponse] - The turbo jpeg encoder is available for usage
+14 Mar 12:40:54 INFO   [geoserver.monitor] - Monitor extension enabled
+14 Mar 12:41:01 CONFIG [geoserver.wps] - Found 5 bindable processes in GeoServer specific processes
+14 Mar 12:41:01 CONFIG [geoserver.wps] - Found 89 bindable processes in Deprecated processes
+14 Mar 12:41:01 CONFIG [geoserver.wps] - Blacklisting process vec:GroupCandidateSelection as the input groupingAttributes of type class java.lang.Object cannot be handled
+14 Mar 12:41:01 CONFIG [geoserver.wps] - Found 31 bindable processes in Vector processes
+14 Mar 12:41:01 CONFIG [geoserver.wps] - Blacklisting process ras:ConvolveCoverage as the input kernel of type class javax.media.jai.KernelJAI cannot be handled
+14 Mar 12:41:01 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input zones of type class java.lang.Object cannot be handled
+14 Mar 12:41:01 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input nodata of type class it.geosolutions.jaiext.range.Range cannot be handled
+14 Mar 12:41:01 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input rangeData of type class java.lang.Object cannot be handled
+14 Mar 12:41:01 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the output zonal statistics of type interface java.util.List cannot be handled
+14 Mar 12:41:01 CONFIG [geoserver.wps] - Found 18 bindable processes in Raster processes
+14 Mar 12:41:01 CONFIG [geoserver.wps] - Found 48 bindable processes in Geometry processes
+14 Mar 12:41:01 CONFIG [geoserver.wps] - Found 1 bindable processes in PolygonLabelProcess
+14 Mar 12:41:01 CONFIG [geoserver.wps] - Found 1 bindable processes in geo
+14 Mar 12:41:01 CONFIG [geoserver.wps] - Found 1 bindable processes in geo
+14 Mar 12:41:03 WARN   [gce.imagemosaic] - Unable to set ordering between tiff readers spi
+CONFIG 2026-03-14 12:42:11,484 [main][Log4J2Logger.java:215] : Logging policy: Log4J2
+CONFIG 2026-03-14 12:42:12,221 [main][Log4J2Logger.java:189] : Factory implementations for category GridCoverageFactory:
+  org.geotools.coverage.grid.GridCoverageFactory
+CONFIG 2026-03-14 12:42:13,100 [main][Log4J2Logger.java:189] : Factory implementations for category FilterFactory:
+  org.geotools.filter.FilterFactoryImpl
+CONFIG 2026-03-14 12:42:13,179 [main][Log4J2Logger.java:189] : Factory implementations for category StyleFactory:
+  org.geotools.styling.StyleFactoryImpl
+CONFIG 2026-03-14 12:42:13,205 [main][Log4J2Logger.java:189] : Factory implementations for category FeatureFactory:
+  org.geotools.feature.LenientFeatureFactoryImpl
+  org.geotools.feature.ValidatingFeatureFactoryImpl
+DEBUG 2026-03-14 12:42:14,543 [main][Log4J2Logger.java:220] : Extension lookup 'XStreamPersisterInitializer', prior to bean geoserverExtensions initialisation.
+DEBUG 2026-03-14 12:42:14,546 [main][Log4J2Logger.java:220] : Extension lookup 'ExtensionFilter', prior to bean geoserverExtensions initialisation.
+DEBUG 2026-03-14 12:42:14,554 [main][Log4J2Logger.java:220] : Extension lookup 'ExtensionProvider', but provided ApplicationContext is unset.
+DEBUG 2026-03-14 12:42:14,557 [main][Log4J2Logger.java:220] : Extension lookup 'ExtensionFilter', but provided ApplicationContext is unset.
+DEBUG 2026-03-14 12:42:14,652 [main][Log4J2Logger.java:220] : CONFIGURING GEOSERVER LOGGING -------------------------
+14 Mar 12:42:15 CONFIG [geoserver.logging] - Log4j 2 configuration set to DEFAULT_LOGGING.xml
+14 Mar 12:42:23 WARN   [geoserver.monitor] - monitoring storage memory not found, falling back to 'memory'
+14 Mar 12:42:27 CONFIG [org.geoserver] - GeoServer configuration lock is enabled
+14 Mar 12:42:27 CONFIG [org.geoserver] - Loading catalog /opt/geoserver/data_dir
+14 Mar 12:42:27 CONFIG [org.geoserver] - Loaded style 'point'
+14 Mar 12:42:27 CONFIG [org.geoserver] - Loaded style 'generic'
+14 Mar 12:42:27 CONFIG [org.geoserver] - Loaded style 'polygon'
+14 Mar 12:42:27 CONFIG [org.geoserver] - Loaded style 'line'
+14 Mar 12:42:27 CONFIG [org.geoserver] - Loaded style 'raster'
+14 Mar 12:42:27 WARN   [org.geoserver] - No 'workspaces' directory found, unable to load any stores.
+14 Mar 12:42:27 CONFIG [org.geoserver] - Read catalog in 362.2 ms
+14 Mar 12:42:28 CONFIG [org.geoserver] - Loaded service 'WMSInfoImpl-4fdd1db9:19cec5e9977:-8000', enabled
+14 Mar 12:42:28 CONFIG [org.geoserver] - Loaded service 'WCSInfoImpl-4fdd1db9:19cec5e9977:-7fff', enabled
+14 Mar 12:42:28 CONFIG [org.geoserver] - Loaded service 'WPSInfoImpl--475be018:19cebce404f:-7ff9', enabled
+14 Mar 12:42:28 CONFIG [org.geoserver] - Loaded service 'WFSInfoImpl-4fdd1db9:19cec5e9977:-7ffe', enabled
+14 Mar 12:42:28 CONFIG [org.geoserver] - Loaded service 'WMTSInfoImpl-4fdd1db9:19cec5e9977:-7ffd', enabled
+14 Mar 12:42:28 CONFIG [org.geoserver] - Loaded service 'csw', enabled
+14 Mar 12:42:29 CONFIG [gwc.config] - Will look for 'geowebcache.xml' in directory '/opt/geoserver/data_dir/gwc'.
+14 Mar 12:42:30 CONFIG [config.XMLConfiguration] - TileLayerConfiguration file validated fine.
+14 Mar 12:42:30 CONFIG [config.XMLConfiguration] - Initializing GridSets from /opt/geoserver/data_dir/gwc
+14 Mar 12:42:30 INFO   [config.XMLConfiguration] - Read GridSet InspireCRS84Quad
+14 Mar 12:42:30 CONFIG [config.XMLConfiguration] - Initializing layers from /opt/geoserver/data_dir/gwc
+14 Mar 12:42:30 CONFIG [gwc.layer] - Initializing GWC configuration based on GeoServer's Catalog
+14 Mar 12:42:30 CONFIG [gwc.layer] - GeoServer TileLayer store base directory is: gwc-layers
+14 Mar 12:42:30 CONFIG [gwc.layer] - Loading tile layers from gwc-layers
+14 Mar 12:42:30 CONFIG [gwc.layer] - Loaded 0 tile layers in 5.280 ms
+14 Mar 12:42:30 CONFIG [storage.BlobStoreAggregator] - BlobStoreConfiguration /opt/geoserver/data_dir/gwc contained no blob store infos.
+14 Mar 12:42:30 CONFIG [storage.DefaultStorageFinder] - Found system environment variableGEOWEBCACHE_CACHE_DIR set to /opt/geoserver/data_dir/gwc, using it as the default prefix.
+14 Mar 12:42:32 CONFIG [gwc.config] - Initializing GeoServer specific GWC configuration from gwc-gs.xml
+14 Mar 12:42:35 CONFIG [gwc.config] - Will look for 'geowebcache-diskquota.xml' in directory '/opt/geoserver/data_dir/gwc'.
+14 Mar 12:42:35 CONFIG [gwc.config] - Will look for 'geowebcache-diskquota-jdbc.xml' in directory '/opt/geoserver/data_dir/gwc'.
+14 Mar 12:42:35 CONFIG [diskquota.ConfigLoader] - Quota config is: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+14 Mar 12:42:35 CONFIG [diskquota.ConfigLoader] - Quota config is: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+14 Mar 12:42:38 INFO   [flow.config] - Loaded control-flow rule: ows.global=100
+14 Mar 12:42:38 INFO   [flow.config] - Loaded control-flow rule: ows.wms.getmap=10
+14 Mar 12:42:38 INFO   [flow.config] - Loaded control-flow rule: ows.wfs.getfeature.application/msexcel=4
+14 Mar 12:42:38 INFO   [flow.config] - Loaded control-flow rule: user=6
+14 Mar 12:42:38 INFO   [flow.config] - Loaded control-flow rule: ows.gwc=16
+14 Mar 12:42:38 INFO   [flow.config] - Loaded control-flow rule: user.ows.wps.execute=1000/d;30s
+14 Mar 12:42:38 CONFIG [geoserver.flow] - Control-flow active with 6 flow controllers
+14 Mar 12:42:38 WARN   [turbojpeg.TurboJPEGMapResponse] - The turbo jpeg encoder is available for usage
+14 Mar 12:42:40 INFO   [geoserver.monitor] - Monitor extension enabled
+14 Mar 12:42:48 CONFIG [geoserver.wps] - Found 5 bindable processes in GeoServer specific processes
+14 Mar 12:42:48 CONFIG [geoserver.wps] - Found 89 bindable processes in Deprecated processes
+14 Mar 12:42:48 CONFIG [geoserver.wps] - Blacklisting process vec:GroupCandidateSelection as the input groupingAttributes of type class java.lang.Object cannot be handled
+14 Mar 12:42:48 CONFIG [geoserver.wps] - Found 31 bindable processes in Vector processes
+14 Mar 12:42:48 CONFIG [geoserver.wps] - Blacklisting process ras:ConvolveCoverage as the input kernel of type class javax.media.jai.KernelJAI cannot be handled
+14 Mar 12:42:48 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input zones of type class java.lang.Object cannot be handled
+14 Mar 12:42:48 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input nodata of type class it.geosolutions.jaiext.range.Range cannot be handled
+14 Mar 12:42:48 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input rangeData of type class java.lang.Object cannot be handled
+14 Mar 12:42:48 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the output zonal statistics of type interface java.util.List cannot be handled
+14 Mar 12:42:48 CONFIG [geoserver.wps] - Found 18 bindable processes in Raster processes
+14 Mar 12:42:48 CONFIG [geoserver.wps] - Found 48 bindable processes in Geometry processes
+14 Mar 12:42:48 CONFIG [geoserver.wps] - Found 1 bindable processes in PolygonLabelProcess
+14 Mar 12:42:48 CONFIG [geoserver.wps] - Found 1 bindable processes in geo
+14 Mar 12:42:48 CONFIG [geoserver.wps] - Found 1 bindable processes in geo
+14 Mar 12:42:50 WARN   [gce.imagemosaic] - Unable to set ordering between tiff readers spi
+14 Mar 12:43:03 CONFIG [geowebcache.GeoWebCacheDispatcher] - Invoked setServletPrefix(gwc)
+14 Mar 12:43:03 CONFIG [wms.WMSService] - Will NOT recombine tiles for non-tiling clients.
+14 Mar 12:43:03 CONFIG [wms.WMSService] - Will proxy requests to backend that are not getmap or getcapabilities.
+14 Mar 12:43:08 CONFIG [diskquota.ConfigLoader] - Quota config is: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+14 Mar 12:43:08 CONFIG [diskquota.DiskQuotaMonitor] - Setting up disk quota periodic enforcement task
+14 Mar 12:43:08 CONFIG [diskquota.DiskQuotaMonitor] - 0 layers configured with their own quotas. 
+14 Mar 12:43:08 CONFIG [diskquota.DiskQuotaMonitor] - 0 layers attached to global quota 20.0 GB
+14 Mar 12:43:08 CONFIG [diskquota.DiskQuotaMonitor] - Disk quota periodic enforcement task set up every 5 SECONDS
+14 Mar 12:43:09 WARN   [servlet.BaseMapServlet] - Cannot delete file:/usr/local/tomcat/work/Catalina/localhost/geoserver/wicket-filestore
+14 Mar 12:43:10 CONFIG [geoserver.security] - Start reloading user/groups for service named default
+14 Mar 12:43:10 CONFIG [geoserver.security] - Reloading user/groups successful for service named default
+14 Mar 12:43:11 CONFIG [geoserver.security] - AuthenticationCache Initialized with 1000 Max Entries, 300 seconds idle time, 600 seconds time to live and 3 concurrency level
+14 Mar 12:43:11 CONFIG [geoserver.security] - AuthenticationCache Eviction Task created to run every 600 seconds
+14 Mar 12:56:56 CONFIG [gwc.layer] - GeoServer TileLayer store base directory is: gwc-layers
+14 Mar 12:56:56 CONFIG [gwc.layer] - Loading tile layers from gwc-layers
+14 Mar 12:56:56 CONFIG [gwc.layer] - Loaded 0 tile layers in 8.647 ms
+14 Mar 12:56:56 CONFIG [gwc.layer] - GeoServer TileLayer store base directory is: gwc-layers
+14 Mar 12:56:56 CONFIG [gwc.layer] - Loading tile layers from gwc-layers
+14 Mar 12:56:56 CONFIG [gwc.layer] - Loaded 0 tile layers in 1.417 ms
+CONFIG 2026-03-15 10:40:06,107 [main][Log4J2Logger.java:215] : Logging policy: Log4J2
+CONFIG 2026-03-15 10:40:06,476 [main][Log4J2Logger.java:189] : Factory implementations for category GridCoverageFactory:
+  org.geotools.coverage.grid.GridCoverageFactory
+CONFIG 2026-03-15 10:40:07,765 [main][Log4J2Logger.java:189] : Factory implementations for category FilterFactory:
+  org.geotools.filter.FilterFactoryImpl
+CONFIG 2026-03-15 10:40:07,794 [main][Log4J2Logger.java:189] : Factory implementations for category StyleFactory:
+  org.geotools.styling.StyleFactoryImpl
+CONFIG 2026-03-15 10:40:07,803 [main][Log4J2Logger.java:189] : Factory implementations for category FeatureFactory:
+  org.geotools.feature.LenientFeatureFactoryImpl
+  org.geotools.feature.ValidatingFeatureFactoryImpl
+DEBUG 2026-03-15 10:40:08,260 [main][Log4J2Logger.java:220] : Extension lookup 'XStreamPersisterInitializer', prior to bean geoserverExtensions initialisation.
+DEBUG 2026-03-15 10:40:08,261 [main][Log4J2Logger.java:220] : Extension lookup 'ExtensionFilter', prior to bean geoserverExtensions initialisation.
+DEBUG 2026-03-15 10:40:08,264 [main][Log4J2Logger.java:220] : Extension lookup 'ExtensionProvider', but provided ApplicationContext is unset.
+DEBUG 2026-03-15 10:40:08,265 [main][Log4J2Logger.java:220] : Extension lookup 'ExtensionFilter', but provided ApplicationContext is unset.
+DEBUG 2026-03-15 10:40:08,295 [main][Log4J2Logger.java:220] : CONFIGURING GEOSERVER LOGGING -------------------------
