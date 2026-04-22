@@ -88,7 +88,7 @@ CREATE TABLE good_polygons AS
            FROM osm_data m
            JOIN smth_data o ON ST_Intersects(ST_SetCRS(o.geometry, 'EPSG:4326'), m.geom)
            GROUP BY m.id
-           HAVING COUNT(DISTINCT o.id) <= 2
+           HAVING COUNT(DISTINCT o.id) = 1
          );
 
 SELECT COUNT(*) FROM good_polygons;
