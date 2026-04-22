@@ -34,7 +34,6 @@ SELECT href, xmin, ymin, xmax, ymax
 FROM links
 JOIN bboxes ON links.id = bboxes.id;
 
--- Получаем item_url (ссылку на нужную партицию по нашим координатам)
 SET VARIABLE item_url = (
     SELECT DISTINCT
         'https://stac.overturemaps.org/2026-04-15.0/buildings/building/' || links.href
@@ -47,7 +46,6 @@ SET VARIABLE item_url = (
 
 SELECT getvariable('item_url');
 
--- Получаем S3 ссылку
 SET VARIABLE s3_href = (
     SELECT assets.aws.alternate.s3.href
     FROM read_json(getvariable('item_url'))
