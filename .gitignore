@@ -3,3 +3,4 @@ geoserver_data/gwc/diskquota_page_store_hsql/diskquota.log
 geoserver_data/gwc/geowebcache_2026-03-14T100503.bak
 geoserver_data/security/masterpw/default/passwd
 geoserver_data/security/masterpw.digest
+duckdb.exe
