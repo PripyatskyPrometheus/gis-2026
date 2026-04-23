@@ -80455,3 +80455,252 @@ Request: getMap
 23 Apr 07:29:24 INFO   [geoserver.flow] - Request completed, running requests: 1, blocked requests: 0
 23 Apr 07:29:24 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.3.0 GetMap]
 23 Apr 07:29:24 INFO   [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+23 Apr 07:36:35 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+23 Apr 07:36:35 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+23 Apr 07:36:35 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+23 Apr 07:36:35 INFO   [geoserver.flow] - Request [WMS 1.3.0 GetMap] starting, processing through flow controllers
+23 Apr 07:36:35 INFO   [geoserver.flow] - Request [WMS 1.3.0 GetMap] starting, processing through flow controllers
+23 Apr 07:36:35 INFO   [geoserver.flow] - Request [WMS 1.3.0 GetMap] starting, processing through flow controllers
+23 Apr 07:36:35 INFO   [geoserver.flow] - Request control-flow performed, running requests: 3, blocked requests: 0
+23 Apr 07:36:35 INFO   [geoserver.flow] - Request control-flow performed, running requests: 2, blocked requests: 1
+23 Apr 07:36:35 INFO   [geoserver.flow] - Request control-flow performed, running requests: 2, blocked requests: 1
+23 Apr 07:36:36 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[5604787.335674938 : 5626812.664325062, 7026368.5175313335 : 7037031.4824686665]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = PROJCS["WGS 84 / Pseudo-Mercator", 
+  GEOGCS["WGS 84", 
+    DATUM["World Geodetic System 1984", 
+      SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+      AUTHORITY["EPSG","6326"]], 
+    PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+    UNIT["degree", 0.017453292519943295], 
+    AXIS["Geodetic latitude", NORTH], 
+    AXIS["Geodetic longitude", EAST], 
+    AUTHORITY["EPSG","4326"]], 
+  PROJECTION["Popular Visualisation Pseudo Mercator", AUTHORITY["EPSG","1024"]], 
+  PARAMETER["semi_minor", 6378137.0], 
+  PARAMETER["latitude_of_origin", 0.0], 
+  PARAMETER["central_meridian", 0.0], 
+  PARAMETER["scale_factor", 1.0], 
+  PARAMETER["false_easting", 0.0], 
+  PARAMETER["false_northing", 0.0], 
+  UNIT["m", 1.0], 
+  AXIS["Easting", EAST], 
+  AXIS["Northing", NORTH], 
+  AUTHORITY["EPSG","3857"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png8
+	FormatOptions = {DPI=75}
+	Get = true
+	Height = 930
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@349ab7]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {FORMAT=image/png8, CRS=EPSG:3857, STYLES=, WIDTH=1921, HEIGHT=930, LAYERS=gis:poi, TILED=true, REQUEST=GetMap, FORMAT_OPTIONS=dpi:75, BBOX=5604787.335674938,7026368.5175313335,5626812.664325062,7037031.4824686665, VERSION=1.3.0, SERVICE=WMS, TRANSPARENT=TRUE}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = urn:ogc:def:crs:EPSG::3857
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=generic]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.3.0
+	ViewParams = null
+	Width = 1921
+23 Apr 07:36:36 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[5604787.335674938 : 5626812.664325062, 7026368.5175313335 : 7037031.4824686665]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = PROJCS["WGS 84 / Pseudo-Mercator", 
+  GEOGCS["WGS 84", 
+    DATUM["World Geodetic System 1984", 
+      SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+      AUTHORITY["EPSG","6326"]], 
+    PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+    UNIT["degree", 0.017453292519943295], 
+    AXIS["Geodetic latitude", NORTH], 
+    AXIS["Geodetic longitude", EAST], 
+    AUTHORITY["EPSG","4326"]], 
+  PROJECTION["Popular Visualisation Pseudo Mercator", AUTHORITY["EPSG","1024"]], 
+  PARAMETER["semi_minor", 6378137.0], 
+  PARAMETER["latitude_of_origin", 0.0], 
+  PARAMETER["central_meridian", 0.0], 
+  PARAMETER["scale_factor", 1.0], 
+  PARAMETER["false_easting", 0.0], 
+  PARAMETER["false_northing", 0.0], 
+  UNIT["m", 1.0], 
+  AXIS["Easting", EAST], 
+  AXIS["Northing", NORTH], 
+  AUTHORITY["EPSG","3857"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png8
+	FormatOptions = {DPI=75}
+	Get = true
+	Height = 930
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@c8d248ce]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {FORMAT=image/png8, CRS=EPSG:3857, STYLES=, WIDTH=1921, HEIGHT=930, LAYERS=gis:roads, TILED=true, REQUEST=GetMap, FORMAT_OPTIONS=dpi:75, BBOX=5604787.335674938,7026368.5175313335,5626812.664325062,7037031.4824686665, VERSION=1.3.0, SERVICE=WMS, TRANSPARENT=TRUE}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = urn:ogc:def:crs:EPSG::3857
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=generic]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.3.0
+	ViewParams = null
+	Width = 1921
+23 Apr 07:36:36 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[5604787.335674938 : 5626812.664325062, 7026368.5175313335 : 7037031.4824686665]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = PROJCS["WGS 84 / Pseudo-Mercator", 
+  GEOGCS["WGS 84", 
+    DATUM["World Geodetic System 1984", 
+      SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+      AUTHORITY["EPSG","6326"]], 
+    PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+    UNIT["degree", 0.017453292519943295], 
+    AXIS["Geodetic latitude", NORTH], 
+    AXIS["Geodetic longitude", EAST], 
+    AUTHORITY["EPSG","4326"]], 
+  PROJECTION["Popular Visualisation Pseudo Mercator", AUTHORITY["EPSG","1024"]], 
+  PARAMETER["semi_minor", 6378137.0], 
+  PARAMETER["latitude_of_origin", 0.0], 
+  PARAMETER["central_meridian", 0.0], 
+  PARAMETER["scale_factor", 1.0], 
+  PARAMETER["false_easting", 0.0], 
+  PARAMETER["false_northing", 0.0], 
+  UNIT["m", 1.0], 
+  AXIS["Easting", EAST], 
+  AXIS["Northing", NORTH], 
+  AUTHORITY["EPSG","3857"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png8
+	FormatOptions = {DPI=75}
+	Get = true
+	Height = 930
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@e4804762]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {FORMAT=image/png8, CRS=EPSG:3857, STYLES=, WIDTH=1921, HEIGHT=930, LAYERS=gis:buildings, TILED=true, REQUEST=GetMap, FORMAT_OPTIONS=dpi:75, BBOX=5604787.335674938,7026368.5175313335,5626812.664325062,7037031.4824686665, VERSION=1.3.0, SERVICE=WMS, TRANSPARENT=TRUE}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = urn:ogc:def:crs:EPSG::3857
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=generic]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.3.0
+	ViewParams = null
+	Width = 1921
+23 Apr 07:36:36 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.3.0 GetMap]
+23 Apr 07:36:36 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.3.0 GetMap]
+23 Apr 07:36:36 INFO   [geoserver.flow] - Request completed, running requests: 1, blocked requests: 0
+23 Apr 07:36:36 INFO   [geoserver.flow] - Request completed, running requests: 1, blocked requests: 0
+23 Apr 07:36:36 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.3.0 GetMap]
+23 Apr 07:36:36 INFO   [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+23 Apr 08:06:13 CONFIG [gwc.layer] - GeoServer TileLayer store base directory is: gwc-layers
+23 Apr 08:06:13 CONFIG [gwc.layer] - Loading tile layers from gwc-layers
+23 Apr 08:06:13 CONFIG [gwc.layer] - Loaded 3 tile layers in 135.3 ms
+23 Apr 08:06:13 CONFIG [gwc.layer] - GeoServer TileLayer store base directory is: gwc-layers
+23 Apr 08:06:13 CONFIG [gwc.layer] - Loading tile layers from gwc-layers
+23 Apr 08:06:13 CONFIG [gwc.layer] - Loaded 3 tile layers in 22.61 ms
+CONFIG 2026-04-23 11:17:51,215 [main][Log4J2Logger.java:215] : Logging policy: Log4J2
+CONFIG 2026-04-23 11:17:51,431 [main][Log4J2Logger.java:189] : Factory implementations for category GridCoverageFactory:
+  org.geotools.coverage.grid.GridCoverageFactory
+CONFIG 2026-04-23 11:17:52,163 [main][Log4J2Logger.java:189] : Factory implementations for category FilterFactory:
+  org.geotools.filter.FilterFactoryImpl
+CONFIG 2026-04-23 11:17:52,185 [main][Log4J2Logger.java:189] : Factory implementations for category StyleFactory:
+  org.geotools.styling.StyleFactoryImpl
+CONFIG 2026-04-23 11:17:52,192 [main][Log4J2Logger.java:189] : Factory implementations for category FeatureFactory:
+  org.geotools.feature.LenientFeatureFactoryImpl
+  org.geotools.feature.ValidatingFeatureFactoryImpl
+DEBUG 2026-04-23 11:17:52,635 [main][Log4J2Logger.java:220] : Extension lookup 'XStreamPersisterInitializer', prior to bean geoserverExtensions initialisation.
+DEBUG 2026-04-23 11:17:52,636 [main][Log4J2Logger.java:220] : Extension lookup 'ExtensionFilter', prior to bean geoserverExtensions initialisation.
+DEBUG 2026-04-23 11:17:52,639 [main][Log4J2Logger.java:220] : Extension lookup 'ExtensionProvider', but provided ApplicationContext is unset.
+DEBUG 2026-04-23 11:17:52,639 [main][Log4J2Logger.java:220] : Extension lookup 'ExtensionFilter', but provided ApplicationContext is unset.
+DEBUG 2026-04-23 11:17:52,669 [main][Log4J2Logger.java:220] : CONFIGURING GEOSERVER LOGGING -------------------------

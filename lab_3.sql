@@ -75,17 +75,17 @@ WHERE try(ST_IsValid(geometry)) = true;
 
 ALTER TABLE smth_data ADD COLUMN source_type VARCHAR;
 
-UPDATE smth_data
-       SET source_type =
-           CASE
-               WHEN EXISTS (
-                   SELECT 1 FROM osm_data o
-                   WHERE ST_Intersects(ST_SetCRS(smth_data.geometry, 'EPSG:4326'), o.geom)
-               ) THEN 'my'
-               WHEN list_contains(list_transform(smth_data.sources, lambda s: s.dataset), 'OpenStreetMap') THEN 'osm'
-               ELSE 'ml'
-           END;
-lab3 D SELECT source_type, COUNT(*) FROM smth_data GROUP BY source_type;
+UPDATE smth_data 
+SET source_type = 
+    CASE
+        WHEN EXISTS (
+            SELECT 1 FROM osm_data o 
+            WHERE o.user = 'Petruchio_'
+              AND ST_Intersects(ST_SetCRS(smth_data.geometry, 'EPSG:4326'), o.geom)
+        ) THEN 'my'
+        WHEN list_contains(list_transform(smth_data.sources, s -> s.dataset), 'OpenStreetMap') THEN 'osm'
+        ELSE 'ml'
+    END;
 
 SELECT source_type, COUNT(*) FROM smth_data GROUP BY source_type;
 
