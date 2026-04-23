@@ -9,6 +9,7 @@ import VectorLayer from 'ol/layer/Vector';
 import VectorSource from 'ol/source/Vector';
 import GeoJSON from 'ol/format/GeoJSON';
 import { Style, Fill, Stroke } from 'ol/style';
+import { stylefunction } from 'ol-mapbox-style';
 
 const buildingsLayer = new ImageLayer({
   source: new ImageWMS({
@@ -51,38 +52,17 @@ const poiLayer = new ImageLayer({
   })
 });
 
-const styleFunction = (feature) => {
-  const sourceType = feature.get('source_type');
-  let color;
-  
-  switch(sourceType) {
-    case 'my':
-      color = '#4CAF50';
-      break;
-    case 'osm':
-      color = '#2196F3';
-      break;
-    case 'ml':
-      color = '#FF9800';
-      break;
-    default:
-      color = '#888888';
-  }
-  
-  return new Style({
-    fill: new Fill({ color: color + '80' }), // полупрозрачный
-    stroke: new Stroke({ color: color, width: 1 })
-  });
-};
-
 // Слой с Overture данными
 const overtureLayer = new VectorLayer({
   source: new VectorSource({
     url: '/overture.json',
     format: new GeoJSON()
-  }),
-  style: styleFunction
+  })
 });
+
+fetch('/style.json')
+  .then(response => response.json())
+  .then(style => stylefunction(overtureLayer, style, 'overture'));
 
 const map = new Map({
   target: 'map',

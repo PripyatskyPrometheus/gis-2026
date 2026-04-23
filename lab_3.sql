@@ -9,30 +9,30 @@ CREATE TABLE osm_data AS
 SELECT * FROM ST_Read('data.json');
 
 CREATE TABLE links AS
-WITH raw_data AS (
-    SELECT *
-    FROM 'https://stac.overturemaps.org/2026-04-15.0/buildings/building/collection.json'
-),
-raw_links AS (
-    SELECT unnest(links) AS link
-    FROM raw_data
-),
-links AS (
-    SELECT row_number() OVER () id, link.href
-    FROM raw_links
-    WHERE link.type = 'application/geo+json'
-),
-raw_bboxes AS (
-    SELECT unnest(extent.spatial.bbox) bbox
-    FROM raw_data
-),
-bboxes AS (
-    SELECT row_number() OVER () id, bbox[1] xmin, bbox[2] ymin, bbox[3] xmax, bbox[4] ymax
-    FROM raw_bboxes
-)
-SELECT href, xmin, ymin, xmax, ymax
-FROM links
-JOIN bboxes ON links.id = bboxes.id;
+       WITH raw_data AS (
+           SELECT *
+           FROM 'https://stac.overturemaps.org/2026-04-15.0/buildings/building/collection.json'
+       ),
+       raw_links AS (
+           SELECT unnest(links) AS link
+           FROM raw_data
+       ),
+       links AS (
+           SELECT row_number() OVER () id, link.href
+           FROM raw_links
+           WHERE link.type = 'application/geo+json'
+       ),
+       raw_bboxes AS (
+           SELECT unnest(extent.spatial.bbox) bbox
+           FROM raw_data
+       ),
+       bboxes AS (
+           SELECT row_number() OVER () id, bbox[1] xmin, bbox[2] ymin, bbox[3] xmax, bbox[4] ymax
+           FROM raw_bboxes
+       )
+       SELECT href, xmin, ymin, xmax, ymax
+       FROM links
+       JOIN bboxes ON links.id = bboxes.id;
 
 SET VARIABLE item_url = (
     SELECT DISTINCT
@@ -73,43 +73,23 @@ JOIN osm_data_bbox
     AND ST_Ymin(geometry) BETWEEN osm_data_bbox.ymin AND osm_data_bbox.ymax
 WHERE try(ST_IsValid(geometry)) = true;
 
-SELECT COUNT(*) FROM smth_data;
+-- Поскольку данные уже были считаны, таблица smth_data заполнена, решил ничего не считывать и не создавать заново(зачем?). 
+-- Теперь используются только окончательные данные smth_data
+ALTER TABLE smth_data ADD COLUMN source_type VARCHAR;
 
--- Отбираем только те полигоны, которые затрагивают только один объект (дом), 
--- убирая все прочие, которые захватывают дессятки и сотни домов.
--- Вот мамой клянус, не понимаю, откуда у меня могли взяться полигоны, охватывающие огромные территории, если я их в первой лабе
--- ни тушкой, ни чучелом не создавал...
-CREATE TABLE good_polygons AS
-       SELECT id, geom
-       FROM osm_data
-       WHERE ST_GeometryType(geom) = 'POLYGON'
-         AND id IN (
-           SELECT m.id
-           FROM osm_data m
-           JOIN smth_data o ON ST_Intersects(ST_SetCRS(o.geometry, 'EPSG:4326'), m.geom)
-           GROUP BY m.id
-           HAVING COUNT(DISTINCT o.id) = 1
-         );
+UPDATE smth_data
+       SET source_type =
+           CASE
+               WHEN EXISTS (
+                   SELECT 1 FROM osm_data o
+                   WHERE ST_Intersects(ST_SetCRS(smth_data.geometry, 'EPSG:4326'), o.geom)
+               ) THEN 'my'
+               WHEN list_contains(list_transform(smth_data.sources, lambda s: s.dataset), 'OpenStreetMap') THEN 'osm'
+               ELSE 'ml'
+           END;
+lab3 D SELECT source_type, COUNT(*) FROM smth_data GROUP BY source_type;
 
-SELECT COUNT(*) FROM good_polygons;
-
-CREATE TABLE smth_data_corrected AS
-SELECT 
-    geometry,
-    id,
-    sources,
-    CASE
-        WHEN EXISTS (
-            SELECT 1 FROM good_polygons g
-            WHERE ST_Intersects(ST_SetCRS(geometry, 'EPSG:4326'), g.geom)
-        ) THEN 'my'
-        WHEN list_contains(list_transform(sources, s -> s.dataset), 'OpenStreetMap') THEN 'osm'
-        ELSE 'ml'
-    END AS source_type
-FROM smth_data;
-
-SELECT source_type, COUNT(*) FROM smth_data_corrected 
-GROUP BY source_type;
+SELECT source_type, COUNT(*) FROM smth_data GROUP BY source_type;
 
 COPY (
     SELECT json_object(
@@ -122,6 +102,6 @@ COPY (
             )
         )
     )
-    FROM smth_data_corrected
+    FROM smth_data
 ) TO 'client/vite-project/public/overture.json'
 WITH (FORMAT CSV, HEADER false, QUOTE '');
