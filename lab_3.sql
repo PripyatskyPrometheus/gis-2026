@@ -73,8 +73,6 @@ JOIN osm_data_bbox
     AND ST_Ymin(geometry) BETWEEN osm_data_bbox.ymin AND osm_data_bbox.ymax
 WHERE try(ST_IsValid(geometry)) = true;
 
--- Поскольку данные уже были считаны, таблица smth_data заполнена, решил ничего не считывать и не создавать заново(зачем?). 
--- Теперь используются только окончательные данные smth_data
 ALTER TABLE smth_data ADD COLUMN source_type VARCHAR;
 
 UPDATE smth_data
